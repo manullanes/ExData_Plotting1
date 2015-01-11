@@ -1,5 +1,8 @@
 # Plot number 4
 
+# English Date System
+Sys.setlocale("LC_TIME", "English")
+
 # Reading of the data set from the .txt file
 powerData<-read.table("./household_power_consumption.txt",header=TRUE,sep=";")
 
@@ -13,7 +16,7 @@ limSup<-as.Date("2007-02-02",format="%Y-%m-%d")
 powerSub<-subset(powerData,Date>=limInf & Date<=limSup)
 
 # Opening of the Device
-png(filename="plot4.png",width=480,height=480,units = "px")
+png(filename="plot4.png",width=480,height=480,units = "px",bg="transparent")
 
 # Frame for the 4 figures
 par(mfrow=c(2,2))

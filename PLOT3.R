@@ -1,5 +1,8 @@
 # Plot number 3
 
+# English Date System
+Sys.setlocale("LC_TIME", "English")
+
 # Reading of the data set from the .txt file
 powerData<-read.table("./household_power_consumption.txt",header=TRUE,sep=";")
 
@@ -30,7 +33,7 @@ totalX<-c(X1,X2,X3)
 totalY<-c(Y,Y,Y)
 
 # Opening of the Device
-png(filename="plot3.png",width=480,height=480,units = "px")
+png(filename="plot3.png",width=480,height=480,units = "px",bg="transparent")
 
 # Plotting Lines
 plot(totalY,totalX,xlab="",ylab="Energy sub metering",type="n")

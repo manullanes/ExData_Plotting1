@@ -1,5 +1,8 @@
 # Plot number 2
 
+# English Date System
+Sys.setlocale("LC_TIME", "English")
+
 # Reading of the data set from the .txt file
 powerData<-read.table("./household_power_consumption.txt",header=TRUE,sep=";")
 
@@ -21,7 +24,7 @@ Y<-powerSub[,2]
 X<-as.numeric(X)
 
 # Opening of the Device
-png(filename="plot2.png",width=480,height=480,units = "px")
+png(filename="plot2.png",width=480,height=480,units = "px",bg="transparent")
 
 # Plotting Line
 plot(Y,X,xlab="",ylab="Global Active Power (kilowatts)",type="l")

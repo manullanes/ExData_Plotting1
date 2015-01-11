@@ -1,5 +1,8 @@
 # Plot number 1
 
+# English Date System
+Sys.setlocale("LC_TIME", "English")
+
 # Reading of the data set from the .txt file
 powerData<-read.table("./household_power_consumption.txt",header=TRUE,sep=";")
 
@@ -20,7 +23,7 @@ X<-as.matrix(X)
 X<-as.numeric(X)
 
 # Opening of the Device
-png(filename="plot1.png",width=480,height=480,units = "px")
+png(filename="plot1.png",width=480,height=480,units = "px",bg="transparent")
 
 # Plotting Histogram
 hist(X,col="red",xlab="Global Active Power (kilowatts)",main="Global Active Power")
